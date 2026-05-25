@@ -258,6 +258,9 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .lloc-illustration-wrap{position:relative;width:min(640px,100%);margin:0 auto}
 .lloc-illustration-wrap img{display:block;width:100%;height:auto;border-radius:3px}
 .lloc-frame{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);pointer-events:none;overflow:visible}
+@media(max-width:480px){
+  .lloc-illustration-wrap{width:min(640px,90%)}
+}
 .lloc-frame path{fill:none;stroke:var(--color-green);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55;vector-effect:non-scaling-stroke}
 .lloc-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:var(--spacing-md)}
 .lloc-info-item{padding:1.25rem;background:var(--color-bg-primary);border-radius:2px;border-left:2px solid var(--color-green-light)}
