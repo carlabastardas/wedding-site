@@ -98,7 +98,7 @@ window.SITE_CONTENT = {
         icon:  "assets/icon-cotxe.png",
         label: "En cotxe",
         title: "Accés directe i pàrquing disponible",
-        body:  "Accés per l'A2, sortida 545 (Jorba). A 5.8km des de la sortida segui el desviament a mà dreta (indicat amb el cartell \"Ca n'Alzina - UAUU Weddings\") que us portarà fins al pàrquing del recinte.",
+        body:  "Accés per l'A2, sortida 545 (Jorba). A 5.8km des de la sortida seguiu el desviament a mà dreta (indicat amb el cartell \"Ca n'Alzina - UAUU Weddings\") que us portarà fins al pàrquing del recinte.",
         recommended: true,
       },
       taxi: {
