@@ -262,7 +262,8 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .lloc-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:var(--spacing-md)}
 .lloc-info-item{padding:1.25rem;background:var(--color-bg-primary);border-radius:2px;border-left:2px solid var(--color-green-light)}
 .lloc-info-item .t-label{margin-bottom:.4rem;color:var(--color-green-light)}
-.lloc-info-item p{font-family:var(--font-sans);font-weight:300;font-size:.9rem;color:var(--color-text);line-height:1.5}
+.lloc-info-item p{font-family:var(--font-sans);font-weight:300;font-size:.95rem;color:var(--color-text);line-height:1.5}
+.lloc-description{text-align:center;margin-bottom:var(--spacing-md);color:rgb(154,148,144);font-family:var(--font-sans);font-weight:300;font-size:.95rem;line-height:1.8}
 .lloc-map-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:var(--spacing-md);padding:.75rem 1.5rem;border:1px solid var(--color-green);color:var(--color-green);text-decoration:none;font-family:var(--font-sans);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;transition:background var(--transition-fast),color var(--transition-fast);border-radius:1px}
 .lloc-map-link:hover{background:var(--color-green);color:var(--color-ivory)}
 .arribar-grid{display:grid;gap:1rem;margin-top:var(--spacing-md)}
@@ -281,7 +282,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .espais-note{display:flex;align-items:flex-start;gap:1rem}
 .espais-note-icon{width:2.25rem;height:2.25rem;background:rgba(168,193,170,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
 .espais-note-title{font-family:var(--font-serif);font-size:1.05rem;color:var(--color-ivory);margin-bottom:.3rem;line-height:1.25}
-.espais-note-body{font-family:var(--font-sans);font-weight:300;font-size:.88rem;line-height:1.7;color:rgba(245,240,232,.55)}
+.espais-note-body{font-family:var(--font-sans);font-weight:300;font-size:.9rem;line-height:1.7;color:rgba(245,240,232,.55)}
 .espais-note-body em{font-family:var(--font-serif);font-style:italic;color:var(--color-green-muted)}
 .vest-espais-divider{width:100%;height:1px;background:rgba(168,193,170,.1);margin:var(--spacing-md) 0}
 
@@ -299,6 +300,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .alot-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;margin-top:.1rem}
 .alot-tag{font-family:var(--font-sans);font-size:.62rem;font-weight:300;letter-spacing:.06em;color:var(--color-text-light);background:var(--color-bg-alt);border:1px solid var(--color-cream);padding:.18rem .55rem;border-radius:100px;line-height:1.4}
 .alot-tag--special{color:var(--color-terracotta);background:rgba(193,122,90,.05);border-color:rgba(193,122,90,.25)}
+.alot-tag-text{font-family:var(--font-sans);font-weight:300;font-size:.9rem;line-height:1.4;color:inherit}
 .alot-tag--copyable{cursor:pointer;display:inline-flex;align-items:center;gap:.4em;font:inherit;transition:background var(--transition-fast),border-color var(--transition-fast),color var(--transition-fast)}
 .alot-tag--copyable .alot-tag-icon{opacity:.6;transition:opacity var(--transition-fast),transform var(--transition-fast)}
 .alot-tag--copyable:hover{background:rgba(193,122,90,.12);border-color:rgba(193,122,90,.5)}
@@ -332,7 +334,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .regals-botanical svg, .regals-botanical > span{animation:float-gentle 8s ease-in-out infinite 1s}
 .regals-botanical > span svg{animation:none}
 .regals-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.2rem,3.5vw,1.55rem);line-height:1.55;color:var(--color-text-on-dark);max-width:440px;margin:0 auto var(--spacing-sm)}
-.regals-sub{font-family:var(--font-sans);font-weight:300;font-size:.92rem;line-height:1.75;color:rgba(245,240,232,.55);max-width:400px;margin-bottom:var(--spacing-md)}
+.regals-sub{font-family:var(--font-sans);font-weight:300;font-size:.95rem;line-height:1.75;color:rgba(245,240,232,.55);max-width:400px;margin-bottom:var(--spacing-md)}
 .regals-iban-inline{font-family:var(--font-sans);font-size:.8rem;color:rgba(245,240,232,.3);font-style:italic;border-top:1px solid rgba(168,193,170,.15);padding-top:var(--spacing-sm);margin-top:var(--spacing-sm)}
 .regals-iban-inline span{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(168,193,170,.4);margin-bottom:.2rem}
 .rsvp-scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding-top:var(--spacing-md);cursor:pointer}
@@ -614,7 +616,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 
     <!-- Text descriptiu -->
     <div class="reveal reveal-delay-2" style="margin-top: var(--spacing-md);">
-      <p class="t-body" data-content="lloc.description" style="text-align: center; max-width: 520px; margin-inline: auto;">Una masia de pedra catalana envoltada de pins i grans vistes. La combinació d'espais interiors plens d'encant i jardins oberts a la llum i la vegetació ens van atrapar de seguida, esperem que aquesta sensació ens acompanyi durant el gran dia!</p>
+      <p class="t-body lloc-description" data-content="lloc.description"></p>
     </div>
 
     <!-- Targetes de com arribar — fusionades aquí -->
