@@ -18,7 +18,7 @@ window.SITE_CONTENT = {
   },
 
   // Endpoint del Google Apps Script (Web App URL acabada en /exec)
-  rsvpEndpoint: "https://script.google.com/macros/s/AKfycbx0iHseC2LWTwxsD7e6NbdfVN-S0MN4BWaRq-jYbbyqiF_rHai_0Q1mL-Y-CQsD-kao/exec",
+  rsvpEndpoint: "https://script.google.com/macros/s/AKfycbzln2RbrwvVblA_eaYxhB3Ksk2Emf3vzDE3qxZQdMibM6daxTKtRXfTzsGPoHkU-z-S/exec",
 
 
   /* ─────────────────  1 · HERO  ───────────────── */
