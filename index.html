@@ -1208,11 +1208,18 @@ if (resubmitBtn) {
     form.style.transition = 'opacity 0.4s ease';
     requestAnimationFrame(() => { form.style.opacity = '1'; });
 
-    // Focus al primer camp i scroll suau al formulari
+    // Focus al primer camp i scroll suau a l'inici de la secció RSVP
     setTimeout(() => {
       nameInput.focus({ preventScroll: true });
-      const rect = form.getBoundingClientRect();
-      window.scrollTo({ top: window.scrollY + rect.top - 80, behavior: 'smooth' });
+      const rsvpSection = document.getElementById('rsvp') || document.querySelector('.rsvp-section');
+      if (rsvpSection) {
+        const rect = rsvpSection.getBoundingClientRect();
+        window.scrollTo({ top: window.scrollY + rect.top - 24, behavior: 'smooth' });
+      } else {
+        // Fallback: scroll to form top
+        const rect = form.getBoundingClientRect();
+        window.scrollTo({ top: window.scrollY + rect.top - 80, behavior: 'smooth' });
+      }
     }, 100);
   });
 }
