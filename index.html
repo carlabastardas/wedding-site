@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carla &amp; Alex · 5 de desembre de 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   TOKENS — CARLA & ALEX · 5 DESEMBRE 2026
+   Fonts: DM Serif Display · DM Sans · Great Vibes
+   ============================================================ */
+:root {
+  --color-bg-primary:   #FAF8F3;
+  --color-bg-alt:       #F0EDE4;
+  --color-bg-dark:      #2D4A35;
+  --color-bg-rose:      #F4EBE6;
+  --color-green:        #3D5C42;
+  --color-green-light:  #7A9E7E;
+  --color-green-muted:  #A8C1AA;
+  --color-cream:        #E8E0D0;
+  --color-ivory:        #F5F3EC;
+  --color-rose:         #E8D5CC;
+  --color-wood:         #C4A882;
+  --color-terracotta:   #C17A5A;
+  --color-gold:         #C9A84C;
+  --color-text:         #2C2C2C;
+  --color-text-light:   #6B6B6B;
+  --color-text-muted:   #9A9490;
+  --color-text-on-dark: #F5F0E8;
+  --font-serif:  'DM Serif Display', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, sans-serif;
+  --font-script: 'Great Vibes', cursive;
+  --spacing-xs: 0.5rem; --spacing-sm: 1rem; --spacing-md: 2rem;
+  --spacing-lg: 4rem;   --spacing-xl: 6rem;
+  --transition-fast: 0.2s ease; --transition-mid: 0.4s ease; --transition-slow: 0.8s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);background:var(--color-bg-primary);line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* TIPOGRAFIA */
+.t-display{font-family:var(--font-serif);font-weight:400;font-size:clamp(3.6rem,16.8vw,6.6rem);line-height:1.0;letter-spacing:-0.01em;color:var(--color-green)}
+.t-script{font-family:var(--font-script);font-weight:400;font-size:clamp(1.6rem,5vw,2.6rem);color:var(--color-terracotta);line-height:1.3}
+.t-script--connector{font-family:var(--font-script);font-weight:400;font-size:clamp(1.44rem,4.8vw,2.16rem);color:var(--color-terracotta);opacity:.8;display:block;line-height:1;margin-block:.2em}
+.t-heading{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.2;color:var(--color-green)}
+.t-heading-italic{font-family:var(--font-serif);font-style:italic;font-weight:400;font-size:clamp(1.05rem,2.6vw,1.3rem);line-height:1.35;color:var(--color-green-light)}
+.t-label{font-family:var(--font-sans);font-weight:400;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--color-text-light)}
+.t-body{font-family:var(--font-sans);font-weight:300;font-size:1rem;line-height:1.8;color:var(--color-text)}
+.t-small{font-family:var(--font-sans);font-weight:300;font-size:0.85rem;line-height:1.6;color:var(--color-text-light)}
+
+/* LAYOUT */
+.container{width:100%;max-width:680px;margin-inline:auto;padding-inline:1.5rem}
+.text-center{text-align:center}
+
+/* ANIMACIONS */
+@keyframes float-gentle{0%,100%{transform:translateY(0)rotate(0)}33%{transform:translateY(-6px)rotate(.5deg)}66%{transform:translateY(-3px)rotate(-.3deg)}}
+@keyframes fade-in-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@keyframes grow-track{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 1px rgba(122,158,126,.4)}50%{box-shadow:0 0 0 4px rgba(122,158,126,.15),0 0 0 1px rgba(122,158,126,.4)}}
+.anim-hero-names{animation:fade-in-up .9s ease both .5s}
+.anim-hero-divider{animation:fade-in-up .7s ease both 1.3s}
+.anim-hero-cta{animation:fade-in-up .7s ease both 1.5s}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .72s ease,transform .72s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.10s}.reveal-delay-2{transition-delay:.20s}
+.reveal-delay-3{transition-delay:.30s}.reveal-delay-4{transition-delay:.40s}
+.reveal-delay-5{transition-delay:.50s}
+
+/* SEPARADOR BOTANIC */
+.botanical-divider{display:flex;align-items:center;gap:1rem;justify-content:center;margin:var(--spacing-md) 0}
+
+/* Separador d'eucaliptus — dues branques mirades */
+.eucalyptus-divider{display:flex;align-items:center;justify-content:center;margin:var(--spacing-md) 0;gap:0;line-height:0}
+.euc-branch{display:block;width:clamp(80px,14vw,140px);height:auto;opacity:.42;filter:saturate(.8);flex-shrink:0;pointer-events:none;user-select:none}
+.euc-branch--right{transform:scaleX(-1)}
+.euc-branch--left{margin-right:-.35rem}
+.euc-branch--right{margin-left:-.35rem}
+@media(max-width:480px){.euc-branch{opacity:.4;width:clamp(70px,20vw,110px)}}
+
+/* CELEBRACIÓ EUCALIPTUS — pluja contínua de fulles dins la secció RSVP */
+.rsvp-section{position:relative}
+.euc-celebration{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.euc-celebration > *{z-index:1}
+.rsvp-confirmation{position:relative;z-index:2}
+.euc-falling-leaf{position:absolute;top:-180px;left:var(--leaf-x,50%);will-change:transform;animation:euc-translate var(--leaf-fall-dur,9s) linear forwards}
+.euc-falling-leaf>img{display:block;width:var(--leaf-w,55px);height:auto;opacity:0;will-change:transform,opacity;filter:saturate(.85);animation:euc-rotate var(--leaf-fall-dur,9s) linear forwards, euc-fade var(--leaf-fall-dur,9s) ease-in-out forwards}
+@keyframes euc-translate{
+  0%   {transform:translate(0,0)}
+  25%  {transform:translate(calc(var(--leaf-dx,0px) * 0.35), calc(var(--leaf-dy,800px) * 0.25))}
+  55%  {transform:translate(calc(var(--leaf-dx,0px) * -0.15), calc(var(--leaf-dy,800px) * 0.55))}
+  80%  {transform:translate(calc(var(--leaf-dx,0px) * 0.6), calc(var(--leaf-dy,800px) * 0.85))}
+  100% {transform:translate(var(--leaf-dx,0px), var(--leaf-dy,800px))}
+}
+@keyframes euc-rotate{
+  0%   {transform:rotate(var(--leaf-rot-start,0deg))}
+  100% {transform:rotate(var(--leaf-rot-end,360deg))}
+}
+@keyframes euc-fade{
+  0%       {opacity:0}
+  10%      {opacity:var(--leaf-opacity,.65)}
+  85%      {opacity:var(--leaf-opacity,.65)}
+  100%     {opacity:0}
+}
+@media (prefers-reduced-motion: reduce){.euc-celebration{display:none}}
+.botanical-divider::before,.botanical-divider::after{content:'';flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--color-green-light))}
+.botanical-divider::after{background:linear-gradient(90deg,var(--color-green-light),transparent)}
+.botanical-divider--on-dark::before{background:linear-gradient(90deg,transparent,rgba(168,193,170,.4))}
+.botanical-divider--on-dark::after{background:linear-gradient(90deg,rgba(168,193,170,.4),transparent)}
+.botanical-divider--on-alt::before{background:linear-gradient(90deg,transparent,var(--color-green-light))}
+.botanical-divider--on-alt::after{background:linear-gradient(90deg,var(--color-green-light),transparent)}
+
+
+/* ============================================================
+   PLACEHOLDERS — substituts visuals temporals
+   Per substituir per icones/il·lustracions definitives més tard
+   ============================================================ */
+.ph-circle {
+  border-radius: 50%;
+  border: 1px dashed var(--color-green-light);
+  background: rgba(122,158,126,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-green);
+  box-sizing: border-box;
+}
+.ph-circle--dark {
+  border-color: rgba(168,193,170,0.45);
+  background: rgba(168,193,170,0.05);
+  color: rgba(168,193,170,0.8);
+}
+.ph-circle > svg { width: 42%; height: 42%; opacity: 0.7; display: block; }
+.ph-circle--sm { width: 2.5rem; height: 2.5rem; }
+.ph-circle--md { width: 56px; height: 56px; }
+.ph-circle--xl { width: 110px; height: 110px; }
+.tl-icon-img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; display: block; }
+.tl-icon-circle-frame { position: relative; display: inline-block; width: 56px; height: 56px; line-height: 0; }
+.tl-icon-circle-frame .tl-icon-ring { position: absolute; inset: -6px; width: calc(100% + 12px); height: calc(100% + 12px); pointer-events: none; overflow: visible; }
+.tl-icon-circle-frame .tl-icon-ring path { fill: none; stroke: var(--color-green); stroke-width: 1; stroke-linecap: round; opacity: .5; vector-effect: non-scaling-stroke; }
+.ph-frame {
+  width: min(460px, 100%);
+  aspect-ratio: 23 / 10;
+  margin: 0 auto;
+  border-radius: 3px;
+  border: 1px dashed var(--color-green-light);
+  background: repeating-linear-gradient(135deg, transparent 0 14px, rgba(122,158,126,0.05) 14px 15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-green);
+}
+.ph-frame > svg { width: 38px; height: 38px; opacity: 0.55; display: block; }
+.ph-frame-label {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  opacity: 0.6;
+}
+
+/* HERO */
+#hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-block:4rem 3rem;position:relative;overflow:hidden;background-size:cover;background-position:center;background-repeat:no-repeat}
+#hero .t-display{color:var(--color-ivory)}
+#hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 55% at 50% 45%, rgba(20,35,25,0.55) 0%, rgba(20,35,25,0.30) 45%, rgba(20,35,25,0.12) 85%, rgba(20,35,25,0) 100%), linear-gradient(to bottom, rgba(20,35,25,0.20) 0%, rgba(20,35,25,0) 25%, rgba(20,35,25,0) 55%, rgba(20,35,25,0.55) 100%);pointer-events:none;z-index:1}
+#hero .t-display{text-shadow:0 2px 24px rgba(20,35,25,0.35)}
+.anim-hero-cta .t-label,.anim-hero-cta .hero-location span{text-shadow:0 1px 10px rgba(20,35,25,0.7)}
+.hero-scroll-hint span{text-shadow:0 1px 8px rgba(20,35,25,0.7)}
+.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;position:relative;z-index:1;width:100%;max-width:600px;padding-inline:1.5rem}
+#hero .t-script--connector{color:var(--color-rose)}
+.hero-location{margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.hero-location svg{opacity:.9;flex-shrink:0;filter:drop-shadow(0 1px 4px rgba(20,35,25,0.6))}
+.hero-scroll-hint{position:absolute;bottom:2rem;left:0;right:0;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:fade-in-up 1s ease both 2s}
+.hero-scroll-hint span{font-family:var(--font-sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,232,.95)}
+.scroll-arrow{animation:float-gentle 2s ease-in-out infinite}
+
+/* RSVP */
+.rsvp-section{background:var(--color-bg-primary);padding-block:var(--spacing-xl)}
+.rsvp-header{text-align:center;margin-bottom:3.5rem}
+.rsvp-header .t-label{display:block;margin-bottom:.9rem}
+.rsvp-header .t-heading{margin-bottom:.8rem}
+.rsvp-header .t-heading-italic{display:block;max-width:580px;margin-inline:auto}
+.rsvp-solo-note{display:block;margin-top:1.4rem;color:var(--color-green)}
+.rsvp-deadline{display:block;margin-top:.5rem;color:var(--color-green)}
+.rsvp-form{display:flex;flex-direction:column;gap:0}
+.rsvp-field{padding-top:1.75rem;padding-bottom:.25rem;border-bottom:1px solid var(--color-cream);transition:border-color var(--transition-fast)}
+.rsvp-field:first-child{border-top:1px solid var(--color-cream)}
+.rsvp-field:focus-within{border-bottom-color:var(--color-green-light)}
+.rsvp-field-label{display:block;font-family:var(--font-sans);font-weight:400;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:.9rem}
+.rsvp-input{display:block;width:100%;background:transparent;border:none;outline:none;font-family:var(--font-sans);font-weight:300;font-size:1.05rem;color:var(--color-text);padding:0;line-height:1.5;-webkit-appearance:none}
+.rsvp-input::placeholder{color:var(--color-text-muted);font-weight:300}
+.rsvp-toggle-group{display:flex;gap:0;border:1px solid var(--color-cream);border-radius:2px;overflow:hidden;width:fit-content}
+.rsvp-toggle-option{position:relative;flex:1}
+.rsvp-toggle-option input[type="radio"]{position:absolute;opacity:0;width:0;height:0}
+.rsvp-toggle-option label{display:block;padding:.85rem 1.75rem;font-family:var(--font-sans);font-weight:300;font-size:.9rem;letter-spacing:.04em;color:var(--color-text-muted);cursor:pointer;background:transparent;transition:background var(--transition-fast),color var(--transition-fast);white-space:nowrap;user-select:none;border-right:1px solid var(--color-cream)}
+.rsvp-toggle-option:last-child label{border-right:none}
+.rsvp-toggle-option input[type="radio"]:checked+label{background:var(--color-green);color:var(--color-text-on-dark);font-weight:400}
+.rsvp-toggle-option label:hover{background:var(--color-bg-alt);color:var(--color-text)}
+.rsvp-allergens-wrapper{overflow:hidden;max-height:0;opacity:0;transition:max-height .55s cubic-bezier(.4,0,.2,1),opacity .45s ease;padding-top:0}
+.rsvp-allergens-wrapper.visible{max-height:400px;opacity:1}
+.rsvp-allergens-inner{padding-top:1.75rem;border-top:1px solid var(--color-cream)}
+#allergens-wrapper .rsvp-field{padding-bottom:.25rem}
+#allergens-wrapper .rsvp-textarea{font-size:1.05rem;line-height:1.5}
+.rsvp-textarea{display:block;width:100%;background:transparent;border:none;outline:none;font-family:var(--font-sans);font-weight:300;font-size:.95rem;color:var(--color-text);padding:0;line-height:1.8;resize:none;min-height:80px;-webkit-appearance:none}
+.rsvp-textarea::placeholder{color:var(--color-text-muted)}
+.rsvp-submit-area{padding-top:3rem;text-align:center}
+.rsvp-submit-btn{display:inline-block;background:transparent;border:1px solid var(--color-green);color:var(--color-green);font-family:var(--font-sans);font-weight:400;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;padding:1rem 2.75rem;cursor:pointer;border-radius:1px;transition:background var(--transition-fast),color var(--transition-fast),opacity var(--transition-fast);-webkit-appearance:none;line-height:1}
+.rsvp-submit-btn:hover{background:var(--color-green);color:var(--color-text-on-dark)}
+.rsvp-submit-btn:disabled{opacity:.4;cursor:default;pointer-events:none}
+.rsvp-error{display:block;font-family:var(--font-sans);font-size:.75rem;font-weight:300;color:var(--color-terracotta);margin-top:0;max-height:0;overflow:hidden;opacity:0;transition:opacity var(--transition-fast),max-height var(--transition-fast),margin-top var(--transition-fast)}
+.rsvp-error.show{opacity:1;max-height:3em;margin-top:.5rem}
+.rsvp-field.has-error{border-bottom-color:var(--color-terracotta)}
+.rsvp-confirmation{display:none;text-align:center;padding-block:2rem}
+.rsvp-confirmation.visible{display:block;animation:fade-in-up .7s ease forwards}
+.rsvp-confirm-label{display:block;font-family:var(--font-sans);font-weight:400;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:1.75rem}
+.rsvp-confirm-name{display:block;font-family:var(--font-serif);font-style:italic;font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.15;margin-bottom:1.1rem}
+.rsvp-confirm-name--yes{color:var(--color-green-light)}
+.rsvp-confirm-name--no{color:var(--color-wood)}
+.rsvp-confirm-heading{font-family:var(--font-serif);font-size:clamp(1.2rem,3vw,1.6rem);line-height:1.3;margin-bottom:.85rem}
+.rsvp-confirm-heading--yes{color:var(--color-green)}
+.rsvp-confirm-heading--no{color:var(--color-text)}
+.rsvp-confirm-body{font-family:var(--font-sans);font-weight:300;font-size:.95rem;color:var(--color-text-light);line-height:1.85;max-width:360px;margin-inline:auto}
+.rsvp-resubmit-btn{display:inline-block;margin-top:2rem;background:transparent;border:1px solid var(--color-green-muted);color:var(--color-green);font-family:var(--font-sans);font-weight:400;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;padding:.7rem 1.75rem;cursor:pointer;border-radius:1px;transition:background var(--transition-fast),color var(--transition-fast),border-color var(--transition-fast)}
+.rsvp-resubmit-btn:hover{background:var(--color-green);color:var(--color-text-on-dark);border-color:var(--color-green)}
+@media(max-width:480px){.rsvp-toggle-group{width:100%}.rsvp-toggle-option{flex:1}.rsvp-toggle-option label{padding:.85rem 1rem;text-align:center;font-size:.85rem}}
+
+/* TIMELINE */
+#programa{background:var(--color-bg-alt);padding-block:var(--spacing-xl);position:relative;overflow:hidden}
+#programa::before{content:none}
+.tl-wrap{position:relative;margin-top:var(--spacing-lg);padding-bottom:var(--spacing-xs)}
+.tl-track{position:absolute;top:8px;bottom:8px;left:50%;transform:translateX(-50%);width:1px;background:linear-gradient(to bottom,transparent,rgba(61,92,66,.22) 6%,rgba(61,92,66,.22) 94%,transparent);transform-origin:top center;animation:grow-track 1.8s cubic-bezier(.4,0,.2,1) both .4s;z-index:0}
+.tl-item{display:grid;grid-template-columns:1fr 20px 1fr;align-items:center;row-gap:.65rem;padding-bottom:3.25rem;position:relative;z-index:1}
+.tl-item:last-child{padding-bottom:0}
+.tl-time-col{grid-column:1;grid-row:1;text-align:right;padding-right:1rem}
+.tl-time{font-family:var(--font-sans);font-weight:400;font-size:1.24rem;letter-spacing:.12em;text-transform:uppercase;color:var(--color-green);line-height:1;display:block;white-space:nowrap}
+.tl-dot-col{grid-column:2;grid-row:1;display:flex;justify-content:center;align-items:center;position:relative;z-index:2}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--color-green);border:2px solid var(--color-bg-alt);box-shadow:0 0 0 1px rgba(61,92,66,.45);flex-shrink:0;transition:transform var(--transition-mid),background var(--transition-mid)}
+.tl-item:hover .tl-dot{transform:scale(1.4);background:var(--color-green-light)}
+.tl-dot--ceremony{background:var(--color-terracotta);box-shadow:0 0 0 1px rgba(193,122,90,.45)}
+.tl-dot--party{background:var(--color-gold);box-shadow:0 0 0 1px rgba(201,168,76,.45);animation:pulse-dot 3s ease-in-out infinite}
+.tl-icon{grid-column:3;grid-row:1;padding-left:1rem;line-height:0;opacity:.88}
+.tl-title{grid-column:3;grid-row:2;padding-left:1rem;font-family:var(--font-sans);font-weight:500;font-size:1.24rem;color:var(--color-bg-dark);line-height:1.25;letter-spacing:.01em}
+@media(max-width:380px){.tl-time-col{padding-right:.6rem}.tl-icon,.tl-title{padding-left:.6rem}}
+
+/* EL LLOC */
+#el-lloc{background:var(--color-bg-alt);padding-block:var(--spacing-lg)}
+#el-lloc .t-heading{color:var(--color-bg-dark)}
+.lloc-illustration{display:flex;justify-content:center;margin-bottom:.5rem}
+.lloc-illustration-wrap{position:relative;width:min(640px,100%);margin:0 auto}
+.lloc-illustration-wrap img{display:block;width:100%;height:auto;border-radius:3px}
+.lloc-frame{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);pointer-events:none;overflow:visible}
+.lloc-frame path{fill:none;stroke:var(--color-green);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.55;vector-effect:non-scaling-stroke}
+.lloc-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:var(--spacing-md)}
+.lloc-info-item{padding:1.25rem;background:var(--color-bg-primary);border-radius:2px;border-left:2px solid var(--color-green-light)}
+.lloc-info-item .t-label{margin-bottom:.4rem;color:var(--color-green-light)}
+.lloc-info-item p{font-family:var(--font-sans);font-weight:300;font-size:.9rem;color:var(--color-text);line-height:1.5}
+.lloc-map-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:var(--spacing-md);padding:.75rem 1.5rem;border:1px solid var(--color-green);color:var(--color-green);text-decoration:none;font-family:var(--font-sans);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;transition:background var(--transition-fast),color var(--transition-fast);border-radius:1px}
+.lloc-map-link:hover{background:var(--color-green);color:var(--color-ivory)}
+.arribar-grid{display:grid;gap:1rem;margin-top:var(--spacing-md)}
+.arribar-card{padding:1.5rem;border-radius:2px;display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;align-items:start;background:var(--color-ivory);border:1px solid var(--color-cream)}
+.arribar-card--disabled{opacity:.55}
+.arribar-icon{width:2.5rem;height:2.5rem;background:rgba(61,92,66,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+.arribar-card-label--light{font-family:var(--font-sans);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--color-green);margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem}
+.arribar-card-title--light{font-family:var(--font-serif);font-size:1.05rem;color:var(--color-bg-dark);margin-bottom:.4rem;line-height:1.25}
+.arribar-card-body--light{font-family:var(--font-sans);font-weight:400;font-size:.9rem;line-height:1.7;color:var(--color-text)}
+@media(max-width:480px){.lloc-info-grid{grid-template-columns:1fr}.arribar-card{grid-template-columns:2rem 1fr;gap:.75rem;padding:1.25rem}}
+
+/* VESTIMENTA */
+#vestimenta{background:var(--color-bg-dark);padding-block:var(--spacing-lg)}
+.section-header{margin-bottom:var(--spacing-md)}
+.section-header .t-label{display:block;margin-bottom:.75rem}
+.espais-note{display:flex;align-items:flex-start;gap:1rem}
+.espais-note-icon{width:2.25rem;height:2.25rem;background:rgba(168,193,170,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem}
+.espais-note-title{font-family:var(--font-serif);font-size:1.05rem;color:var(--color-ivory);margin-bottom:.3rem;line-height:1.25}
+.espais-note-body{font-family:var(--font-sans);font-weight:300;font-size:.88rem;line-height:1.7;color:rgba(245,240,232,.55)}
+.espais-note-body em{font-family:var(--font-serif);font-style:italic;color:var(--color-green-muted)}
+.vest-espais-divider{width:100%;height:1px;background:rgba(168,193,170,.1);margin:var(--spacing-md) 0}
+
+/* ALLOTJAMENT */
+#allotjament{background:var(--color-bg-alt);padding-block:var(--spacing-lg)}
+.allotjament-intro{text-align:center;margin-bottom:var(--spacing-md);color:var(--color-text-muted);font-family:var(--font-sans);font-weight:300;font-size:.95rem;line-height:1.8}
+.alot-cards{display:grid;gap:.5rem}
+.alot-cards>[data-render="allotjament-main"]{display:grid;gap:.5rem}
+.alot-card{background:var(--color-ivory);border:1px solid var(--color-cream);border-radius:2px;padding:.85rem 1.1rem;transition:border-color var(--transition-fast),box-shadow var(--transition-fast)}
+.alot-card:hover{border-color:var(--color-green-muted);box-shadow:0 2px 8px rgba(61,92,66,.06)}
+.alot-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.alot-card-name{font-family:var(--font-serif);font-size:.98rem;color:var(--color-green);line-height:1.2;margin-bottom:.1rem}
+.alot-card-type{font-family:var(--font-sans);font-size:.7rem;font-weight:300;color:var(--color-text-muted);line-height:1.3;margin-bottom:.4rem}
+.alot-card-dist{font-family:var(--font-sans);font-size:.7rem;font-weight:400;color:var(--color-wood);letter-spacing:.04em;white-space:nowrap;margin-top:.1rem;flex-shrink:0}
+.alot-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;margin-top:.1rem}
+.alot-tag{font-family:var(--font-sans);font-size:.62rem;font-weight:300;letter-spacing:.06em;color:var(--color-text-light);background:var(--color-bg-alt);border:1px solid var(--color-cream);padding:.18rem .55rem;border-radius:100px;line-height:1.4}
+.alot-tag--special{color:var(--color-terracotta);background:rgba(193,122,90,.05);border-color:rgba(193,122,90,.25)}
+.alot-tag--copyable{cursor:pointer;display:inline-flex;align-items:center;gap:.4em;font:inherit;transition:background var(--transition-fast),border-color var(--transition-fast),color var(--transition-fast)}
+.alot-tag--copyable .alot-tag-icon{opacity:.6;transition:opacity var(--transition-fast),transform var(--transition-fast)}
+.alot-tag--copyable:hover{background:rgba(193,122,90,.12);border-color:rgba(193,122,90,.5)}
+.alot-tag--copyable:hover .alot-tag-icon{opacity:1}
+.alot-tag--copyable:active{transform:translateY(0.5px)}
+.alot-tag--copied{color:var(--color-green) !important;background:rgba(122,158,126,.10) !important;border-color:rgba(122,158,126,.5) !important}
+.alot-card-link{font-family:var(--font-sans);font-size:.72rem;font-weight:400;color:var(--color-green-light);text-decoration:none;letter-spacing:.02em;white-space:nowrap;transition:color var(--transition-fast);flex-shrink:0}
+.alot-card-link:hover{color:var(--color-green)}
+.allotjament-footer{margin-top:var(--spacing-sm)}
+
+
+/* ALLOTJAMENT — recomanats + col·lapsable */
+.alot-recommended-tag{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-sans);font-size:.56rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--color-green);background:rgba(61,92,66,.08);padding:.22rem .6rem;border-radius:100px;margin-bottom:.5rem}
+.alot-recommended-tag::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--color-green-light)}
+.alot-card--recommended{border-color:rgba(122,158,126,.45)}
+.alot-more{margin-top:1rem}
+.alot-more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.55rem;width:fit-content;margin:1.25rem auto 0;padding:.75rem 1.5rem;font-family:var(--font-sans);font-size:.7rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--color-green);border:1px solid var(--color-green-muted);border-radius:1px;background:transparent;transition:background var(--transition-fast),color var(--transition-fast),border-color var(--transition-fast);user-select:none}
+.alot-more>summary::-webkit-details-marker{display:none}
+.alot-more>summary::marker{display:none}
+.alot-more>summary:hover{background:var(--color-green);color:var(--color-ivory);border-color:var(--color-green)}
+.alot-more-chevron{transition:transform var(--transition-mid);flex-shrink:0}
+.alot-more[open]>summary .alot-more-chevron{transform:rotate(180deg)}
+.alot-more[open]>summary .alot-more-label-closed,.alot-more:not([open])>summary .alot-more-label-open{display:none}
+.alot-more-cards{display:grid;gap:.5rem;margin-top:1rem;animation:fade-in .5s ease}
+
+/* REGALS */
+#regals{background:var(--color-bg-dark);padding-block:var(--spacing-lg)}
+.regals-center{display:flex;flex-direction:column;align-items:center;text-align:center}
+.regals-script{font-family:var(--font-script);font-size:clamp(2.2rem,8vw,3.2rem);color:var(--color-terracotta);opacity:.75;display:block;line-height:1.2;margin-bottom:var(--spacing-sm)}
+.regals-botanical{margin-bottom:var(--spacing-md)}
+.regals-botanical svg, .regals-botanical > span{animation:float-gentle 8s ease-in-out infinite 1s}
+.regals-botanical > span svg{animation:none}
+.regals-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(1.2rem,3.5vw,1.55rem);line-height:1.55;color:var(--color-text-on-dark);max-width:440px;margin:0 auto var(--spacing-sm)}
+.regals-sub{font-family:var(--font-sans);font-weight:300;font-size:.92rem;line-height:1.75;color:rgba(245,240,232,.55);max-width:400px;margin-bottom:var(--spacing-md)}
+.regals-iban-inline{font-family:var(--font-sans);font-size:.8rem;color:rgba(245,240,232,.3);font-style:italic;border-top:1px solid rgba(168,193,170,.15);padding-top:var(--spacing-sm);margin-top:var(--spacing-sm)}
+.regals-iban-inline span{display:block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(168,193,170,.4);margin-bottom:.2rem}
+.rsvp-scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding-top:var(--spacing-md);cursor:pointer}
+.rsvp-scroll-hint span{font-family:var(--font-sans);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--color-green-light);transition:color var(--transition-fast)}
+.rsvp-scroll-hint:hover span{color:var(--color-green)}
+.rsvp-scroll-hint:hover .scroll-arrow{animation-duration:.8s}
+.timeline-scroll-hint{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding-top:var(--spacing-md);cursor:pointer}
+.timeline-scroll-hint span{font-family:var(--font-sans);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--color-green-light);transition:color var(--transition-fast)}
+.timeline-scroll-hint:hover span{color:var(--color-green)}
+.timeline-scroll-hint:hover .scroll-arrow{animation-duration:.8s}
+
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:var(--hero-bg-desktop, url('assets/hero-desktop.webp'));background-size:cover;background-position:center;background-repeat:no-repeat;transform:scale(1.18) translateX(-4%);animation:hero-pan 16s ease-in-out infinite alternate;will-change:transform}
+@media(max-width:768px){.hero-bg{background-image:var(--hero-bg-mobile, url('assets/hero-mobile.webp'))}}
+@keyframes hero-pan{from{transform:scale(1.18) translateX(-4%)}to{transform:scale(1.18) translateX(4%)}}
+#hero::before{z-index:1}
+.hero-inner{z-index:2 !important}
+.hero-scroll-hint{z-index:2}
+@media (prefers-reduced-motion: reduce){.hero-bg{animation:none;transform:scale(1.08)}}
+
+/* TWEAKS PANEL */
+.tweaks-panel{position:fixed;right:1rem;bottom:1rem;z-index:9999;width:300px;max-width:calc(100vw - 2rem);background:#fff;color:#222;border:1px solid #d8d2c4;border-radius:8px;box-shadow:0 12px 36px rgba(20,35,25,.18),0 2px 8px rgba(20,35,25,.08);font-family:var(--font-sans);font-size:.85rem;display:none;flex-direction:column;overflow:hidden;animation:tweaks-in .25s ease both}
+.tweaks-panel--open{display:flex}
+@keyframes tweaks-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.tweaks-panel__head{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid #ece6d6;background:#f8f4e9}
+.tweaks-panel__title{font-family:var(--font-serif);font-size:1rem;letter-spacing:.04em;color:var(--color-green)}
+.tweaks-panel__close{background:none;border:0;font-size:1.25rem;cursor:pointer;color:#888;line-height:1;padding:.25rem .35rem;border-radius:4px}
+.tweaks-panel__close:hover{background:#f0e9d6;color:#333}
+.tweaks-panel__body{padding:.85rem 1rem 1.1rem;display:flex;flex-direction:column;gap:1.1rem;max-height:60vh;overflow-y:auto}
+.tweaks-section{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:.55rem}
+.tweaks-section>legend{font-family:var(--font-sans);font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted);padding:0;margin-bottom:.2rem}
+.tweaks-row{display:flex;flex-direction:column;gap:.35rem;font-size:.82rem;color:#333}
+.tweaks-row>span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#666}
+.tweaks-row input[type="text"]{font-family:inherit;font-size:.82rem;padding:.45rem .6rem;border:1px solid #d8d2c4;border-radius:4px;background:#fff;color:#222;outline:none;transition:border-color .15s ease}
+.tweaks-row input[type="text"]:focus{border-color:var(--color-green-light)}
+.tweaks-row--toggle{flex-direction:row;align-items:center;gap:.55rem}
+.tweaks-row--toggle>span{font-size:.82rem;letter-spacing:0;text-transform:none;color:#333}
+.tweaks-row input[type="checkbox"]{accent-color:var(--color-green);width:1rem;height:1rem;cursor:pointer}
+@media(max-width:480px){.tweaks-panel{right:.5rem;bottom:.5rem;left:.5rem;width:auto}}
+</style>
+</head>
+<body>
+
+<!-- 1 HERO -->
+
+<section id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <!-- Noms -->
+    <div class="hero-names-wrap anim-hero-names" style="margin-top: -2rem;">
+      <h1 class="t-display" style="display:flex; flex-direction: column; align-items: center; gap: 0;">
+        <span data-content="hero.name1">Carla</span>
+        <span class="t-script--connector" data-content="hero.connector">&amp;</span>
+        <span data-content="hero.name2">Alex</span>
+      </h1>
+    </div>
+
+    <!-- Data i lloc -->
+    <div class="anim-hero-cta" style="text-align: center; margin-top: 3rem;">
+      <p class="t-label" data-content="hero.date" style="color: var(--color-ivory); font-size: 0.95rem; letter-spacing: 0.22em; margin-bottom: 0.8rem;">
+        5 de desembre de 2026
+      </p>
+      <div class="hero-location">
+        <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
+          <path d="M6 0C3.24 0 1 2.24 1 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#F5F3EC"/>
+        </svg>
+        <span class="t-label" data-content="hero.location" style="white-space: nowrap; color: var(--color-ivory); font-size: 0.85rem; letter-spacing: 0.18em;">Ca n'Alzina · Rubió · Catalunya</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll hint -->
+  <a href="#programa" class="hero-scroll-hint" style="text-decoration:none;">
+    <span data-content="hero.scrollHint">Mira el dia</span>
+    <svg class="scroll-arrow" width="16" height="20" viewBox="0 0 16 20" fill="none">
+      <path d="M8 2v14M2 10l6 7 6-7" stroke="#A8C1AA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</section>
+
+<!-- 2 TIMELINE -->
+
+<section id="programa">
+  <div class="container" style="position: relative; z-index: 1;">
+
+    <!-- ── Capçalera ── -->
+    <div class="text-center reveal">
+      <p class="t-label" data-content="timeline.label" style="margin-bottom: 0.75rem;">5 DE DESEMBRE DE 2026</p>
+      <h2 class="t-heading" data-content="timeline.title">Programa del dia</h2>
+    </div>
+
+    <!-- ── Separador botànic ── -->
+    <div class="botanical-divider reveal reveal-delay-1" aria-hidden="true">
+      <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+        <ellipse cx="10" cy="7" rx="5" ry="6" fill="#A8C1AA" opacity="0.5" transform="rotate(-10 10 7)"/>
+        <ellipse cx="10" cy="7" rx="5" ry="6" fill="#3D5C42" opacity="0.35" transform="rotate(10 10 7)"/>
+        <line x1="10" y1="13" x2="10" y2="23" stroke="#7A9E7E" stroke-width="1" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         TIMELINE
+         ══════════════════════════════════════════════════ -->
+    <div class="tl-wrap" data-render="timeline"><!-- Render dinàmic des de content.js --></div>
+
+    <a href="#rsvp" class="timeline-scroll-hint reveal reveal-delay-2" style="text-decoration:none;">
+      <span data-content="timeline.scrollHint">Confirma la teva assistència</span>
+      <svg class="scroll-arrow" width="16" height="20" viewBox="0 0 16 20" fill="none">
+        <path d="M8 2v14M2 10l6 7 6-7" stroke="#7A9E7E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </div>
+</section>
+
+<!-- 3 RSVP -->
+
+<section class="rsvp-section" id="rsvp">
+  <div class="container">
+
+    <!-- Capçalera -->
+    <header class="rsvp-header reveal">
+      <span class="t-label" data-content="rsvp.label">RSVP</span>
+      <h2 class="t-heading" id="rsvp-title" data-content="rsvp.title"></h2>
+      <span class="t-heading-italic" id="rsvp-subtitle" data-content="rsvp.subtitle">Estarem encantats de saber si podràs acompanyar-nos. Respon quan puguis, sense cap pressa.</span>
+      <span class="t-label rsvp-solo-note" data-content="rsvp.soloNote">Una resposta per persona, si us plau.</span>
+      <span class="t-label rsvp-deadline" id="rsvp-deadline" data-content="rsvp.deadline"></span>
+    </header>
+
+    <div class="botanical-divider reveal reveal-delay-1"></div>
+
+    <!-- Formulari -->
+    <form
+      class="rsvp-form reveal reveal-delay-2"
+      id="rsvp-form"
+      novalidate
+      aria-label="Formulari de confirmació d'assistència"
+    >
+
+      <!-- Camp 1 · Nom i cognoms -->
+      <div class="rsvp-field" id="field-name">
+        <label class="rsvp-field-label" for="rsvp-name" data-content="rsvp.fieldNameLabel">Nom i cognoms</label>
+        <input
+          type="text"
+          id="rsvp-name"
+          name="name"
+          class="rsvp-input"
+          placeholder="El teu nom complet" data-content-placeholder="rsvp.fieldNamePlaceholder"
+          autocomplete="name"
+          aria-required="true"
+        >
+        <span class="rsvp-error" id="error-name" role="alert" data-content="rsvp.errorName">Si us plau, escriu el teu nom.</span>
+      </div>
+
+      <!-- Camp 2 · Assistència (toggle radio) -->
+      <div class="rsvp-field" id="field-attendance">
+        <span class="rsvp-field-label" id="attendance-label" data-content="rsvp.fieldAttendanceLabel">Assistiràs?</span>
+        <div
+          class="rsvp-toggle-group"
+          role="radiogroup"
+          aria-labelledby="attendance-label"
+          aria-required="true"
+        >
+          <div class="rsvp-toggle-option">
+            <input
+              type="radio"
+              id="attendance-yes"
+              name="attendance"
+              value="yes"
+              aria-label="Sí, hi seré" data-content-aria-label="rsvp.optionYes"
+            >
+            <label for="attendance-yes" data-content="rsvp.optionYes">Sí, hi seré</label>
+          </div>
+          <div class="rsvp-toggle-option">
+            <input
+              type="radio"
+              id="attendance-no"
+              name="attendance"
+              value="no"
+              aria-label="No podré ser-hi" data-content-aria-label="rsvp.optionNo"
+            >
+            <label for="attendance-no" data-content="rsvp.optionNo">No podré ser-hi</label>
+          </div>
+        </div>
+        <span class="rsvp-error" id="error-attendance" role="alert" data-content="rsvp.errorAttendance">Selecciona una opció.</span>
+      </div>
+
+      <!-- Camp 3 · Al·lèrgens (condicional, apareix si "Sí") -->
+      <div class="rsvp-allergens-wrapper" id="allergens-wrapper" aria-hidden="true">
+        <div class="rsvp-allergens-inner">
+          <div class="rsvp-field" style="border-top: none; padding-top: 0;">
+            <label class="rsvp-field-label" for="rsvp-allergens" id="allergens-label">
+              <span data-content="rsvp.fieldAllergensLabel">Al·lèrgies o restriccions alimentàries</span>
+              <span data-content="rsvp.fieldAllergensHint" style="font-size: 0.6rem; letter-spacing: 0.15em; color: var(--color-text-muted); margin-left: 0.4em;">(opcional)</span>
+            </label>
+            <textarea
+              id="rsvp-allergens"
+              name="allergens"
+              class="rsvp-textarea"
+              placeholder="Gluten, lactosa, fruits secs… o el que calgui que sapiguem" data-content-placeholder="rsvp.fieldAllergensPlaceholder"
+              rows="1"
+              aria-labelledby="allergens-label"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botó d'enviament -->
+      <div class="rsvp-submit-area reveal reveal-delay-3">
+        <button
+          type="submit"
+          class="rsvp-submit-btn"
+          id="rsvp-submit"
+        >
+          <span data-content="rsvp.submitBtn">Confirmar assistència</span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Missatge de confirmació (ocult fins enviament) -->
+    <div
+      class="rsvp-confirmation"
+      id="rsvp-confirmation"
+      role="status"
+      aria-live="polite"
+    >
+      <span class="rsvp-confirm-label" data-content="rsvp.confirmLabel">Hem rebut la teva resposta</span>
+      <span class="rsvp-confirm-name" id="confirm-name"><!-- nom del convidat · injectat per JS --></span>
+      <p class="rsvp-confirm-heading" id="confirm-heading"><!-- injectat per JS --></p>
+      <p class="rsvp-confirm-body" id="confirm-body">Ho entenem perfectament. Gràcies per avisar-nos — t'ho explicarem tot amb fotos i records quan ens veiem. </p>
+      <button type="button" id="rsvp-resubmit" class="rsvp-resubmit-btn" data-content="rsvp.resubmitBtn">Enviar una altra resposta</button>
+    </div>
+
+    <div class="botanical-divider reveal" style="margin-top: var(--spacing-md);"></div>
+
+    <a href="#el-lloc" class="rsvp-scroll-hint reveal reveal-delay-2" style="text-decoration:none;">
+      <span data-content="rsvp.scrollHint">On ens trobarem</span>
+      <svg class="scroll-arrow" width="16" height="20" viewBox="0 0 16 20" fill="none">
+        <path d="M8 2v14M2 10l6 7 6-7" stroke="#3D5C42" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+  </div>
+</section>
+
+<!-- 4 EL LLOC -->
+
+<section id="el-lloc" class="section section--alt">
+  <div class="container">
+
+    <!-- Capçalera -->
+    <div class="text-center reveal">
+      <p class="t-label" data-content="lloc.label" style="margin-bottom: 0.75rem;">El lloc</p>
+      <h2 class="t-heading" data-content="lloc.name" style="color: var(--color-bg-dark);">Ca n'Alzina</h2>
+      <p class="t-heading-italic" data-content="lloc.subtitle" style="margin-top: 0.25rem;">Rubió, Catalunya</p>
+    </div>
+
+    <!-- Separador -->
+    <div class="botanical-divider reveal reveal-delay-1" aria-hidden="true">
+      <svg width="18" height="22" viewBox="0 0 12 14" fill="none">
+        <path d="M6 0C3.24 0 1 2.24 1 5c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#3D5C42" opacity="0.8"/>
+      </svg>
+    </div>
+
+    <!-- Il·lustració de la masia -->
+    <div class="lloc-illustration reveal reveal-delay-2">
+      <div class="lloc-illustration-wrap">
+        <img data-content-src="lloc.image" data-content-alt="lloc.imageAlt" src="assets/lloc-canalzina.webp" alt="Aquarel·la aèria de Ca n'Alzina amb la cerimònia al jardí" loading="lazy">
+        <svg class="lloc-frame" viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M -3.2 2.3 Q 6 0.9 14 2.4 Q 22 3.6 30 2.1 Q 40 0.6 50 2.5 Q 60 4.0 70 2.0 Q 82 0.8 90 2.7 Q 98 3.4 102.8 1.5" />
+          <path d="M 98.0 -2.6 Q 99.1 5 97.7 12 Q 96.6 19 98.5 27 Q 99.4 34 97.4 41 Q 96.5 48 98.7 55 Q 99.2 60 98.6 62.4" />
+          <path d="M 103.4 58.3 Q 95 59.5 87 57.8 Q 78 56.5 68 58.4 Q 56 59.8 46 57.6 Q 36 56.4 26 58.5 Q 14 59.6 6 57.8 Q 0 58 -2.4 58.2" />
+          <path d="M 1.9 62.6 Q 0.8 56 2.4 49 Q 3.4 42 1.5 35 Q 0.6 28 2.6 21 Q 3.6 14 1.4 7 Q 0.7 2 2.4 -2.8" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Text descriptiu -->
+    <div class="reveal reveal-delay-2" style="margin-top: var(--spacing-md);">
+      <p class="t-body" data-content="lloc.description" style="text-align: center; max-width: 520px; margin-inline: auto;">Una masia de pedra catalana envoltada de pins i grans vistes. La combinació d'espais interiors plens d'encant i jardins oberts a la llum i la vegetació ens van atrapar de seguida, esperem que aquesta sensació ens acompanyi durant el gran dia!</p>
+    </div>
+
+    <!-- Targetes de com arribar — fusionades aquí -->
+    <div class="arribar-grid reveal reveal-delay-3" data-render="arribar"><!-- Render dinàmic des de content.js --></div>
+
+    <!-- CTA mapa -->
+    <div class="text-center reveal reveal-delay-5" style="margin-top: var(--spacing-md);">
+      <a data-content-href="lloc.mapsUrl" href="https://maps.app.goo.gl/aN8j51X9TWWoTiS16" target="_blank" rel="noopener" class="lloc-map-link">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+          <path d="M7 0C4.24 0 2 2.24 2 5c0 3.75 5 11 5 11S12 8.75 12 5c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="currentColor"/>
+        </svg>
+        <span data-content="lloc.mapsLabel">Veure a Google Maps</span>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- 5 VESTIMENTA -->
+
+<section id="vestimenta" class="section section--dark">
+  <div class="container">
+
+    <div class="section-header text-center reveal">
+      <span class="t-label" data-content="vestimenta.label" style="color: var(--color-green-muted);">Com venir</span>
+      <h2 class="t-heading" data-content="vestimenta.title" style="color: var(--color-text-on-dark);">Vestimenta</h2>
+    </div>
+
+    <div data-render="vestimenta-notes"><!-- Render dinàmic des de content.js --></div>
+
+    <!-- Il·lustració botànica -->
+    <div class="text-center reveal reveal-delay-4" style="margin-top: var(--spacing-md); display: flex; justify-content: center;">
+      <span style="position: relative; display: inline-block; width: 110px; height: 110px; line-height: 0;">
+        <img data-content-src="vestimenta.icon" src="assets/icon-leaves.webp" alt="" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">
+        <svg viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; inset: -9px; width: calc(100% + 18px); height: calc(100% + 18px); pointer-events: none; overflow: visible;">
+          <path d="M 56 3.6 Q 34 4.5 17.5 15.5 Q 4 30 5.2 50 Q 3.8 70 17 84 Q 32 96 50.5 95.4 Q 70.5 96 83.8 82.6 Q 96 69 95 50 Q 96 30 80.5 16 Q 65.5 4 44.5 5.0" fill="none" stroke="rgba(168,193,170,0.55)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        </svg>
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- 6 ALLOTJAMENT -->
+
+<section id="allotjament" class="section section--alt">
+  <div class="container">
+
+    <div class="section-header text-center reveal">
+      <span class="t-label" data-content="allotjament.label">Per als qui veniu de lluny</span>
+      <h2 class="t-heading" data-content="allotjament.title">On allotjar-se</h2>
+    </div>
+
+    <!-- Intro subtil -->
+    <div class="allotjament-intro reveal reveal-delay-1">
+      <p data-content="allotjament.intro" style="color: var(--color-text-muted);"></p>
+    </div>
+
+    <div class="alot-cards reveal reveal-delay-2">
+
+      <!-- Cards principals -->
+      <div data-render="allotjament-main"><!-- Render dinàmic des de content.js --></div>
+
+      <!-- Cards col·lapsades -->
+      <details class="alot-more">
+        <summary>
+          <span class="alot-more-label-closed" data-content="allotjament.moreLabelClosed">Veure'n més · 6 opcions</span>
+          <span class="alot-more-label-open" data-content="allotjament.moreLabelOpen">Veure'n menys</span>
+          <svg class="alot-more-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </summary>
+
+        <div class="alot-more-cards" data-render="allotjament-more"><!-- Render dinàmic --></div>
+
+      </details>
+
+    </div>
+
+    <!-- Peu -->
+    <div class="allotjament-footer reveal">
+      <div class="botanical-divider botanical-divider--on-alt"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 7 REGALS -->
+
+<section id="regals" class="section section--dark">
+  <div class="container">
+
+    <div class="regals-center">
+
+      <span class="t-label reveal" data-content="regals.label" style="color: var(--color-green-muted); margin-bottom: var(--spacing-sm);">Regals</span>
+
+      <!-- Il·lustració floral -->
+      <div class="regals-botanical reveal reveal-delay-1">
+        <span style="position: relative; display: inline-block; width: 110px; height: 110px; line-height: 0;">
+          <img data-content-src="regals.icon" src="assets/icon-gift.webp" alt="" loading="lazy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">
+          <svg viewBox="0 0 100 100" aria-hidden="true" style="position: absolute; inset: -9px; width: calc(100% + 18px); height: calc(100% + 18px); pointer-events: none; overflow: visible;">
+            <path d="M 56 3.6 Q 34 4.5 17.5 15.5 Q 4 30 5.2 50 Q 3.8 70 17 84 Q 32 96 50.5 95.4 Q 70.5 96 83.8 82.6 Q 96 69 95 50 Q 96 30 80.5 16 Q 65.5 4 44.5 5.0" fill="none" stroke="rgba(168,193,170,0.55)" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+          </svg>
+        </span>
+      </div>
+
+      <!-- Accent script -->
+      <span class="regals-script reveal reveal-delay-2" data-content="regals.script">Gràcies</span>
+
+      <!-- Cita -->
+      <blockquote class="regals-quote reveal reveal-delay-3" data-content="regals.quote" style="color: var(--color-text-on-dark);"></blockquote>
+
+      <p class="regals-sub reveal reveal-delay-4" data-content="regals.body" style="color: rgba(245,240,232,0.55); white-space: pre-line;"></p>
+
+      <div class="regals-iban-inline reveal reveal-delay-5" data-render="regals-iban" style="border-top-color: rgba(168,193,170,0.15); color: rgba(245,240,232,0.3); display: none;"><!-- Mostrat només si regals.iban té valor --></div>
+
+      <div class="botanical-divider botanical-divider--on-dark reveal" style="width: 100%; margin-top: 2.5rem;"></div>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="content.js"></script>
+<script>
+
+/* ============================================================
+   CONTENT BINDING — Llegeix de content.js i emplena la pàgina
+   ============================================================ */
+
+const C = window.SITE_CONTENT;
+const RSVP_COPY     = C.rsvp;
+const RSVP_ENDPOINT = C.rsvpEndpoint;
+
+/** Pinta una propietat de SITE_CONTENT a un element. 
+ *  Es resol la ruta amb punts: "hero.name1" → C.hero.name1. 
+ */
+function resolve(path) {
+  return path.split('.').reduce((o, k) => (o == null ? o : o[k]), C);
+}
+
+/** Itera tots els elements amb data-content* i hi injecta el valor corresponent. */
+function bindContent() {
+  // <title>
+  if (C.meta && C.meta.title) document.title = C.meta.title;
+
+  // Background del hero via CSS variables (suporta @media query)
+  const root = document.documentElement;
+  if (C.hero) {
+    if (C.hero.bgDesktop) root.style.setProperty('--hero-bg-desktop', `url('${C.hero.bgDesktop}')`);
+    if (C.hero.bgMobile)  root.style.setProperty('--hero-bg-mobile',  `url('${C.hero.bgMobile}')`);
+  }
+
+  // [data-content]      → textContent
+  // [data-content-href] → href
+  // [data-content-src]  → src
+  // [data-content-alt]  → alt
+  document.querySelectorAll('[data-content]').forEach(el => {
+    const v = resolve(el.dataset.content);
+    if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll('[data-content-href]').forEach(el => {
+    const v = resolve(el.dataset.contentHref);
+    if (v != null) el.setAttribute('href', v);
+  });
+  document.querySelectorAll('[data-content-src]').forEach(el => {
+    const v = resolve(el.dataset.contentSrc);
+    if (v != null) el.setAttribute('src', v);
+  });
+  document.querySelectorAll('[data-content-alt]').forEach(el => {
+    const v = resolve(el.dataset.contentAlt);
+    if (v != null) el.setAttribute('alt', v);
+  });
+  document.querySelectorAll('[data-content-aria-label]').forEach(el => {
+    const v = resolve(el.dataset.contentAriaLabel);
+    if (v != null) el.setAttribute('aria-label', v);
+  });
+  document.querySelectorAll('[data-content-placeholder]').forEach(el => {
+    const v = resolve(el.dataset.contentPlaceholder);
+    if (v != null) el.setAttribute('placeholder', v);
+  });
+}
+
+
+/* ============================================================
+   RENDERERS — Construeixen llistes a partir de SITE_CONTENT
+   ============================================================ */
+
+const TL_RING_SVG = `<svg class="tl-icon-ring" viewBox="0 0 100 100" aria-hidden="true"><path d="M 56 3.6 Q 34 4.5 17.5 15.5 Q 4 30 5.2 50 Q 3.8 70 17 84 Q 32 96 50.5 95.4 Q 70.5 96 83.8 82.6 Q 96 69 95 50 Q 96 30 80.5 16 Q 65.5 4 44.5 5.0"/></svg>`;
+
+function renderTimeline() {
+  const wrap = document.querySelector('[data-render="timeline"]');
+  if (!wrap) return;
+  wrap.innerHTML = '<div class="tl-track" aria-hidden="true"></div>' +
+    C.timeline.items.map((item, i) => `
+      <div class="tl-item reveal reveal-delay-${i + 1}">
+        <div class="tl-time-col"><span class="tl-time">${item.time}</span></div>
+        <div class="tl-dot-col"><div class="tl-dot ${item.dotKind || ''}"></div></div>
+        <div class="tl-icon" aria-hidden="true">
+          <span class="tl-icon-circle-frame">
+            <img class="tl-icon-img" src="${item.icon}" alt="" loading="lazy">
+            ${TL_RING_SVG}
+          </span>
+        </div>
+        <p class="tl-title">${item.title}</p>
+      </div>
+    `).join('');
+}
+
+const ARRIBAR_RING = (color) => `<svg viewBox="0 0 100 100" aria-hidden="true" style="position:absolute;inset:-5px;width:calc(100% + 10px);height:calc(100% + 10px);pointer-events:none;overflow:visible;"><path d="M 56 3.6 Q 34 4.5 17.5 15.5 Q 4 30 5.2 50 Q 3.8 70 17 84 Q 32 96 50.5 95.4 Q 70.5 96 83.8 82.6 Q 96 69 95 50 Q 96 30 80.5 16 Q 65.5 4 44.5 5.0" fill="none" stroke="${color}" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.55"/></svg>`;
+
+const FALLBACK_ARRIBAR_ICON = `<div class="arribar-icon ph-circle ph-circle--sm"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4.5" width="18" height="15" rx="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="8.5" cy="10" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M3 16l5-4 4 3 4-4 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>`;
+
+function renderArribar() {
+  const wrap = document.querySelector('[data-render="arribar"]');
+  if (!wrap) return;
+  const cards = ['cotxe', 'taxi', 'transport'].map(key => {
+    const c = C.lloc.arribar[key];
+    if (!c) return '';
+    const iconHtml = c.icon
+      ? `<div class="arribar-icon" style="position:relative;width:2.5rem;height:2.5rem;flex-shrink:0;line-height:0;"><img src="${c.icon}" alt="" loading="lazy" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">${ARRIBAR_RING('var(--color-green)')}</div>`
+      : FALLBACK_ARRIBAR_ICON;
+    return `
+      <div class="arribar-card ${c.recommended ? 'arribar-card--recommended' : ''}">
+        ${iconHtml}
+        <div>
+          <div class="arribar-card-label arribar-card-label--light">${c.label}</div>
+          <p class="arribar-card-title arribar-card-title--light">${c.title}</p>
+          <p class="arribar-card-body arribar-card-body--light" style="white-space:pre-line;">${c.body}</p>
+        </div>
+      </div>`;
+  }).join('');
+  wrap.innerHTML = cards;
+}
+
+function renderVestimentaNotes() {
+  const wrap = document.querySelector('[data-render="vestimenta-notes"]');
+  if (!wrap) return;
+  wrap.innerHTML = C.vestimenta.notes.map((n, i) => `
+    <div class="espais-note reveal reveal-delay-${i ? 3 : 1}">
+      <div class="espais-note-content">
+        <p class="espais-note-title" style="color: var(--color-ivory);">${n.title}</p>
+        <p class="espais-note-body" style="color: rgba(245,240,232,0.55);">${n.body}</p>
+      </div>
+    </div>${i === 0 ? '<div class="vest-espais-divider reveal reveal-delay-2" style="background: rgba(168,193,170,0.1);"></div>' : ''}
+  `).join('');
+}
+
+function renderAllotjament() {
+  const wrapMain = document.querySelector('[data-render="allotjament-main"]');
+  const wrapMore = document.querySelector('[data-render="allotjament-more"]');
+  if (!wrapMain || !wrapMore) return;
+  const recTag = C.allotjament.recommendedTag;
+
+  const renderCard = (a, isMain) => {
+    const recommended = isMain && a.recommended;
+    const link = a.linkHref
+      ? `<a href="${a.linkHref}" class="alot-card-link"${a.linkHref.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${a.linkText}</a>`
+      : '';
+    const discount = a.discountCode
+      ? `<button type="button" class="alot-tag alot-tag--special alot-tag--copyable" data-copy="${a.discountCode}" aria-label="Copia el codi de descompte ${a.discountCode}"><span class="alot-tag-text">${a.discountLabel || a.discountCode}</span><svg class="alot-tag-icon" width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V5a1 1 0 00-1-1H5a1 1 0 00-1 1v10a1 1 0 001 1h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>`
+      : '';
+    const bottom = discount
+      ? `<div class="alot-card-bottom">${link}${discount}</div>`
+      : link;
+    return `
+      <div class="alot-card ${recommended ? 'alot-card--recommended' : ''}">
+        <div class="alot-card-top">
+          <div>
+            ${recommended ? `<span class="alot-recommended-tag">${recTag}</span>` : ''}
+            <p class="alot-card-name">${a.name}</p>
+            <p class="alot-card-type">${a.type}</p>
+          </div>
+          <span class="alot-card-dist">${a.distance}</span>
+        </div>
+        ${bottom}
+      </div>`;
+  };
+
+  wrapMain.innerHTML = C.allotjament.main.map(a => renderCard(a, true)).join('');
+  wrapMore.innerHTML = C.allotjament.more.map(a => renderCard(a, false)).join('');
+
+  // Etiqueta del summary "Veure'n més"
+  const closed = document.querySelector('[data-content="allotjament.moreLabelClosed"]');
+  if (closed) closed.textContent = (C.allotjament.moreLabelClosed || '').replace('6', String(C.allotjament.more.length));
+}
+
+function renderRegalsIban() {
+  const ibanBlock = document.querySelector('[data-render="regals-iban"]');
+  if (!ibanBlock) return;
+  if (C.regals.iban && C.regals.iban.trim()) {
+    ibanBlock.style.display = '';
+    ibanBlock.innerHTML = `<span style="color: rgba(168,193,170,0.4);">${C.regals.ibanLabel || 'Compte bancari'}</span>${C.regals.iban}`;
+  } else {
+    ibanBlock.style.display = 'none';
+  }
+}
+
+
+/* Executa binding + renderers abans de la resta de lògica */
+bindContent();
+renderTimeline();
+renderArribar();
+renderVestimentaNotes();
+renderAllotjament();
+
+/* ============================================================
+   TWEAKS — Controls editables en mode "Tweaks" de la toolbar
+   ============================================================ */
+const TWEAKS = /*EDITMODE-BEGIN*/{
+  "showBankAccount": true,
+  "ibanLabel": "",
+  "iban": "",
+  "celebrationLeaves": true
+}/*EDITMODE-END*/;
+
+// Valors de content.js (font de veritat). Els TWEAKS només són overrides.
+const CONTENT_DEFAULTS = {
+  iban:      (C.regals && C.regals.iban) || "",
+  ibanLabel: (C.regals && C.regals.ibanLabel) || "Compte bancari",
+};
+
+function applyTweaks(t) {
+  // Compte bancari (secció Regals)
+  if (t.showBankAccount) {
+    const iban  = (t.iban && t.iban.trim())      ? t.iban      : CONTENT_DEFAULTS.iban;
+    const label = (t.ibanLabel && t.ibanLabel.trim()) ? t.ibanLabel : CONTENT_DEFAULTS.ibanLabel;
+    C.regals.iban      = iban;
+    C.regals.ibanLabel = label;
+  } else {
+    C.regals.iban = '';
+  }
+  if (typeof renderRegalsIban === 'function') renderRegalsIban();
+}
+
+applyTweaks(TWEAKS); // aplica overrides + renderitza el bloc IBAN
+
+(function setupTweaksPanel(){
+  const panel = document.createElement('div');
+  panel.className = 'tweaks-panel';
+  panel.setAttribute('aria-hidden', 'true');
+  panel.innerHTML = `
+    <div class="tweaks-panel__head">
+      <span class="tweaks-panel__title">Tweaks</span>
+      <button type="button" class="tweaks-panel__close" aria-label="Tancar">×</button>
+    </div>
+    <div class="tweaks-panel__body">
+      <fieldset class="tweaks-section">
+        <legend>Compte bancari (secció Regals)</legend>
+        <label class="tweaks-row tweaks-row--toggle">
+          <input type="checkbox" data-tweak-key="showBankAccount">
+          <span>Mostrar bloc del compte bancari</span>
+        </label>
+        <label class="tweaks-row">
+          <span>Etiqueta</span>
+          <input type="text" data-tweak-key="ibanLabel" placeholder="Compte bancari">
+        </label>
+        <label class="tweaks-row">
+          <span>IBAN</span>
+          <input type="text" data-tweak-key="iban" placeholder="ESXX XXXX XXXX XXXX XXXX XXXX">
+        </label>
+      </fieldset>
+      <fieldset class="tweaks-section">
+        <legend>RSVP "Sí" · Celebració</legend>
+        <label class="tweaks-row tweaks-row--toggle">
+          <input type="checkbox" data-tweak-key="celebrationLeaves">
+          <span>Pluja d'eucaliptus al confirmar</span>
+        </label>
+      </fieldset>
+    </div>
+  `;
+  document.body.appendChild(panel);
+
+  // Inicialitzar valors als inputs
+  function syncInputs() {
+    panel.querySelectorAll('[data-tweak-key]').forEach(input => {
+      const key = input.getAttribute('data-tweak-key');
+      if (input.type === 'checkbox') input.checked = !!TWEAKS[key];
+      else input.value = TWEAKS[key] != null ? TWEAKS[key] : '';
+    });
+    // Mostrar els valors actuals de content.js com a placeholder
+    const ibanInput  = panel.querySelector('[data-tweak-key="iban"]');
+    const labelInput = panel.querySelector('[data-tweak-key="ibanLabel"]');
+    if (ibanInput  && CONTENT_DEFAULTS.iban)      ibanInput.placeholder  = CONTENT_DEFAULTS.iban + ' (de content.js)';
+    if (labelInput && CONTENT_DEFAULTS.ibanLabel) labelInput.placeholder = CONTENT_DEFAULTS.ibanLabel + ' (de content.js)';
+  }
+  syncInputs();
+
+  // Listener de canvis
+  panel.addEventListener('input', (e) => {
+    const t = e.target;
+    const key = t && t.getAttribute && t.getAttribute('data-tweak-key');
+    if (!key) return;
+    const val = t.type === 'checkbox' ? t.checked : t.value;
+    TWEAKS[key] = val;
+    applyTweaks(TWEAKS);
+    try {
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*');
+    } catch (e) {}
+  });
+
+  panel.querySelector('.tweaks-panel__close').addEventListener('click', () => {
+    panel.classList.remove('tweaks-panel--open');
+    panel.setAttribute('aria-hidden', 'true');
+    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+  });
+
+  window.addEventListener('message', (e) => {
+    if (!e.data || typeof e.data !== 'object') return;
+    if (e.data.type === '__activate_edit_mode') {
+      panel.classList.add('tweaks-panel--open');
+      panel.setAttribute('aria-hidden', 'false');
+    } else if (e.data.type === '__deactivate_edit_mode') {
+      panel.classList.remove('tweaks-panel--open');
+      panel.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  // Anunciar disponibilitat només quan tot estigui registrat
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+})();
+
+
+/* ============================================================
+   LÒGICA DEL FORMULARI
+   ============================================================ */
+
+const form            = document.getElementById('rsvp-form');
+const nameInput       = document.getElementById('rsvp-name');
+const fieldName       = document.getElementById('field-name');
+const errorName       = document.getElementById('error-name');
+const fieldAttendance = document.getElementById('field-attendance');
+const errorAttendance = document.getElementById('error-attendance');
+const allergensWrapper = document.getElementById('allergens-wrapper');
+const allergensInput   = document.getElementById('rsvp-allergens');
+// Auto-grow: el textarea comença en 1 línia i creix amb el text
+if (allergensInput) {
+  const autoGrow = () => {
+    allergensInput.style.height = 'auto';
+    allergensInput.style.height = allergensInput.scrollHeight + 'px';
+  };
+  allergensInput.addEventListener('input', autoGrow);
+}
+const submitBtn       = document.getElementById('rsvp-submit');
+const confirmation    = document.getElementById('rsvp-confirmation');
+
+
+/* --- Toggle al·lèrgens condicional --- */
+document.querySelectorAll('input[name="attendance"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    const isYes = radio.value === 'yes' && radio.checked;
+    allergensWrapper.classList.toggle('visible', isYes);
+    allergensWrapper.setAttribute('aria-hidden', String(!isYes));
+    // Elimina l'error d'assistència si ja n'hi ha un seleccionat
+    fieldAttendance.classList.remove('has-error');
+    errorAttendance.classList.remove('show');
+  });
+});
+
+
+/* --- Neteja error de nom en escriure --- */
+nameInput.addEventListener('input', () => {
+  if (nameInput.value.trim()) {
+    fieldName.classList.remove('has-error');
+    errorName.classList.remove('show');
+  }
+});
+
+
+/* --- Validació i enviament --- */
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  let valid = true;
+
+  // Validar nom
+  if (!nameInput.value.trim()) {
+    fieldName.classList.add('has-error');
+    errorName.classList.add('show');
+    valid = false;
+  } else {
+    fieldName.classList.remove('has-error');
+    errorName.classList.remove('show');
+  }
+
+  // Validar assistència
+  const attendanceValue = form.querySelector('input[name="attendance"]:checked')?.value;
+  if (!attendanceValue) {
+    fieldAttendance.classList.add('has-error');
+    errorAttendance.classList.add('show');
+    valid = false;
+  } else {
+    fieldAttendance.classList.remove('has-error');
+    errorAttendance.classList.remove('show');
+  }
+
+  if (!valid) return;
+
+  // Desactivar botó mentre s'envia
+  submitBtn.disabled = true;
+  submitBtn.textContent = RSVP_COPY.submittingBtn || 'Enviant…';
+
+  // Recollir dades
+  const payload = {
+    name:       nameInput.value.trim(),
+    attendance: attendanceValue,
+    allergens:  document.getElementById('rsvp-allergens').value.trim() || '',
+  };
+
+  try {
+    const res = await fetch(RSVP_ENDPOINT, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body:    JSON.stringify(payload),
+    });
+
+    // Considerem OK qualsevol resposta 2xx (o fins i tot errors de xarxa en preview)
+    // En producció, gestionar res.ok adequadament
+    showConfirmation(attendanceValue === 'yes');
+
+  } catch (err) {
+    // En mode preview / PLACEHOLDER: mostrem igualment el missatge de confirmació
+    // En producció, aquí caldria mostrar un missatge d'error
+    showConfirmation(attendanceValue === 'yes');
+  }
+});
+
+
+/* --- Mostrar missatge de confirmació --- */
+function showConfirmation(isYes) {
+  // Amagar formulari amb fade
+  form.style.transition = 'opacity 0.4s ease';
+  form.style.opacity = '0';
+
+  setTimeout(() => {
+    form.style.display = 'none';
+
+    // Nom del convidat com a accent personalitzat
+    const confirmName = document.getElementById('confirm-name');
+    confirmName.textContent = nameInput.value.trim();
+    confirmName.className = 'rsvp-confirm-name ' + (isYes ? 'rsvp-confirm-name--yes' : 'rsvp-confirm-name--no');
+
+    // Titular i body segons resposta
+    const confirmHeading = document.getElementById('confirm-heading');
+    confirmHeading.textContent = isYes ? RSVP_COPY.confirmYesHeading : RSVP_COPY.confirmNoHeading;
+    confirmHeading.className = 'rsvp-confirm-heading ' + (isYes ? 'rsvp-confirm-heading--yes' : 'rsvp-confirm-heading--no');
+
+    document.getElementById('confirm-body').textContent = isYes ? RSVP_COPY.confirmYesBody : RSVP_COPY.confirmNoBody;
+
+    confirmation.classList.add('visible');
+
+    if (isYes) triggerEucalyptusCelebration();
+  }, 380);
+}
+
+/* --- Botó "Enviar una altra resposta" — torna al formulari ---
+   Útil quan més d'una persona vol confirmar des del mateix dispositiu */
+const resubmitBtn = document.getElementById('rsvp-resubmit');
+if (resubmitBtn) {
+  resubmitBtn.addEventListener('click', () => {
+    // Aturar la celebració si està activa
+    if (typeof stopEucalyptusCelebration === 'function') stopEucalyptusCelebration();
+
+    // Amagar confirmació
+    confirmation.classList.remove('visible');
+
+    // Netejar el formulari
+    form.reset();
+    // Tancar el wrapper d'al·lèrgies si era visible
+    if (allergensWrapper) {
+      allergensWrapper.classList.remove('visible');
+      allergensWrapper.setAttribute('aria-hidden', 'true');
+    }
+    // Reset auto-grow del textarea
+    if (allergensInput) allergensInput.style.height = '';
+    // Netejar errors
+    document.querySelectorAll('.rsvp-error').forEach(e => e.classList.remove('show'));
+    document.querySelectorAll('.rsvp-field.has-error').forEach(e => e.classList.remove('has-error'));
+    // Reactivar el botó de submit
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = RSVP_COPY.submitBtn;
+    }
+
+    // Mostrar el formulari de nou amb fade-in
+    form.style.display = '';
+    form.style.transition = 'opacity 0.4s ease';
+    requestAnimationFrame(() => { form.style.opacity = '1'; });
+
+    // Focus al primer camp i scroll suau al formulari
+    setTimeout(() => {
+      nameInput.focus({ preventScroll: true });
+      const rect = form.getBoundingClientRect();
+      window.scrollTo({ top: window.scrollY + rect.top - 80, behavior: 'smooth' });
+    }, 100);
+  });
+}
+
+/* ============================================================
+   CELEBRACIÓ EUCALIPTUS — pluja contínua de fulles mentre la
+   confirmació "Sí" estigui visible. Contenida dins .rsvp-section.
+   ============================================================ */
+let _eucSpawnInterval = null;
+let _eucSpawnTimeout  = null;
+
+function triggerEucalyptusCelebration() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (typeof TWEAKS !== 'undefined' && TWEAKS.celebrationLeaves === false) return;
+  stopEucalyptusCelebration(); // assegurar estat net
+
+  const section = document.querySelector('.rsvp-section');
+  if (!section) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'euc-celebration';
+  overlay.setAttribute('aria-hidden', 'true');
+  section.appendChild(overlay);
+
+  const LEAVES = [
+    'assets/leaf-1.png','assets/leaf-2.png','assets/leaf-3.png','assets/leaf-4.png',
+    'assets/leaf-5.png','assets/leaf-6.png','assets/leaf-7.png','assets/leaf-8.png',
+    'assets/leaf-9.png','assets/leaf-10.png','assets/leaf-11.png','assets/leaf-12.png',
+    'assets/leaf-13.png','assets/leaf-14.png','assets/leaf-15.png','assets/leaf-16.png'
+  ];
+  const rand = (a, b) => a + Math.random() * (b - a);
+
+  function spawnLeaf() {
+    if (!overlay.isConnected) return;
+    const sectionH = section.offsetHeight;
+    if (sectionH < 80) return; // secció amagada
+
+    const wrap = document.createElement('span');
+    wrap.className = 'euc-falling-leaf';
+    const img = document.createElement('img');
+    img.src = LEAVES[Math.floor(Math.random() * LEAVES.length)];
+    img.alt = '';
+    img.decoding = 'async';
+    wrap.appendChild(img);
+
+    // Concentrar en els costats: 70% pels laterals
+    const sideRoll = Math.random();
+    let startX;
+    if (sideRoll < 0.40)      startX = rand(-5, 22);   // banda esquerra
+    else if (sideRoll < 0.80) startX = rand(78, 105);  // banda dreta
+    else                       startX = rand(22, 78);  // alguna pel mig
+
+    const driftX   = rand(-140, 140);
+    const dy       = sectionH + rand(280, 380);
+    const fallDur  = rand(7.5, 12);
+    const rotStart = rand(-30, 30);
+    const rotEnd   = rotStart + (Math.random() < 0.5 ? -1 : 1) * rand(150, 480);
+    const w        = rand(26, 62);
+    const opacity  = rand(0.38, 0.72);
+
+    wrap.style.setProperty('--leaf-x', startX + '%');
+    wrap.style.setProperty('--leaf-dx', driftX + 'px');
+    wrap.style.setProperty('--leaf-dy', dy + 'px');
+    wrap.style.setProperty('--leaf-fall-dur', fallDur + 's');
+    img.style.setProperty('--leaf-rot-start', rotStart + 'deg');
+    img.style.setProperty('--leaf-rot-end', rotEnd + 'deg');
+    img.style.setProperty('--leaf-w', w + 'px');
+    img.style.setProperty('--leaf-opacity', opacity);
+    img.style.setProperty('--leaf-fall-dur', fallDur + 's');
+
+    wrap.addEventListener('animationend', () => wrap.remove(), { once: true });
+    overlay.appendChild(wrap);
+  }
+
+  // Ràfaga inicial perquè la pluja apareixi de seguida
+  for (let i = 0; i < 11; i++) {
+    _eucSpawnTimeout = setTimeout(spawnLeaf, i * 150);
+  }
+
+  // Spawn continu mentre l'overlay sigui al DOM
+  _eucSpawnInterval = setInterval(() => {
+    if (!overlay.isConnected) { stopEucalyptusCelebration(); return; }
+    // Spawn esglaonat: 1-2 fulles per tick
+    spawnLeaf();
+    if (Math.random() < 0.45) spawnLeaf();
+  }, 600);
+
+  // Pausar quan la secció no és visible per estalviar bateria
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        overlay.style.visibility = e.isIntersecting ? '' : 'hidden';
+      });
+    }, { threshold: 0.05 });
+    io.observe(section);
+    overlay._eucObserver = io;
+  }
+}
+
+function stopEucalyptusCelebration() {
+  if (_eucSpawnInterval) { clearInterval(_eucSpawnInterval); _eucSpawnInterval = null; }
+  if (_eucSpawnTimeout)  { clearTimeout(_eucSpawnTimeout);   _eucSpawnTimeout  = null; }
+  document.querySelectorAll('.euc-celebration').forEach(o => {
+    if (o._eucObserver) o._eucObserver.disconnect();
+    o.remove();
+  });
+}
+
+
+/* ============================================================
+   SCROLL REVEAL
+   Llindar baix + cap rootMargin negatiu = reveals més reactius
+   Elements ja al primer viewport → visible immediatament (animació inicial)
+   ============================================================ */
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+requestAnimationFrame(() => {
+  reveals.forEach(el => {
+    const r = el.getBoundingClientRect();
+    const inViewport = r.top < window.innerHeight && r.bottom > 0;
+    if (inViewport) {
+      el.classList.add('visible');
+    } else {
+      revealObserver.observe(el);
+    }
+  });
+});
+
+/* Copy-to-clipboard per als tags amb .alot-tag--copyable */
+document.querySelectorAll('.alot-tag--copyable').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const code = btn.dataset.copy;
+    const textEl = btn.querySelector('.alot-tag-text');
+    const original = textEl.textContent;
+    try {
+      await navigator.clipboard.writeText(code);
+    } catch (e) {
+      // Fallback: select & copy via execCommand
+      const ta = document.createElement('textarea');
+      ta.value = code; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+    }
+    textEl.textContent = 'Codi copiat ✓';
+    btn.classList.add('alot-tag--copied');
+    clearTimeout(btn._copyTimer);
+    btn._copyTimer = setTimeout(() => {
+      textEl.textContent = original;
+      btn.classList.remove('alot-tag--copied');
+    }, 1600);
+  });
+});
+
+</script>
+
+</body>
+</html>
