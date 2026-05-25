@@ -53,7 +53,7 @@ window.SITE_CONTENT = {
   rsvp: {
     label:      "RSVP",
     title:      "Confirma la teva assistència",
-    subtitle:   "Estarem encantats de saber si podreu acompanyar-nos. Respon quan puguis, sense cap pressa.",
+    subtitle:   "Estarem encantats de saber si podràs acompanyar-nos. Respon quan puguis, sense cap pressa.",
     soloNote:   "Una resposta per persona, si us plau.",
     deadline:   "Data límit: 15 de setembre de 2026",
 
@@ -76,7 +76,7 @@ window.SITE_CONTENT = {
     confirmYesHeading:    "Quina alegria, ens fa molt feliços!",
     confirmYesBody:       "Prepara't per a una tarda plena de llum, bona taula i molts bons moments junts.",
     confirmNoHeading:     "T'enyorarem aquell dia",
-    confirmNoBody:        "Ho entenem perfectament. Gràcies per avisar-nos — t'ho explicarem tot amb fotos i records des de Ca n'Alzina.",
+    confirmNoBody:        "Ho entenem perfectament. Gràcies per avisar-nos — t'ho explicarem tot amb fotos la pròxima ocasió que ens veiem.",
 
     scrollHint:           "On ens trobarem",
   },
@@ -87,7 +87,7 @@ window.SITE_CONTENT = {
     label:       "El lloc",
     name:        "Ca n'Alzina",
     subtitle:    "Rubió, Catalunya",
-    description: "Una masia de pedra catalana envoltada de vistes a la serra de Rubió. La combinació d'espais interiors plens d'encant i jardins oberts a la llum i els pins ens van atraure de seguida. Esperem que aquesta sensació ens acompanyi a tots el gran dia!",
+    description: "Una masia de pedra catalana envoltada de vistes a la serra de Rubió. Els interiors plens d'encant, i els jardins oberts a la llum i els pins ens van atraure de seguida. Esperem que aquesta sensació ens acompanyi a tots el gran dia!",
     image:       "assets/lloc-canalzina.webp",
     imageAlt:    "Aquarel·la aèria de Ca n'Alzina amb la cerimònia al jardí",
     mapsUrl:     "https://maps.app.goo.gl/aN8j51X9TWWoTiS16",
@@ -98,7 +98,7 @@ window.SITE_CONTENT = {
         icon:  "assets/icon-cotxe.png",
         label: "En cotxe",
         title: "Accés directe i pàrquing disponible",
-        body:  "Accés per l'A2, sortida 545 (Jorba). A 5.8km des de la sortida de l'autopista veureu a mà dreta el desviament cap a la masia indicat amb el cartell \"Ca n'Alzina - UAUU Weddings\" que us portarà fins al recinte.\n\nPàrquing privat per a tots els convidats.",
+        body:  "Accés per l'A2, sortida 545 (Jorba). A 5.8km des de la sortida segui el desviament a mà dreta (indicat amb el cartell \"Ca n'Alzina - UAUU Weddings\") que us portarà fins al pàrquing del recinte.",
         recommended: true,
       },
       taxi: {
@@ -112,7 +112,7 @@ window.SITE_CONTENT = {
         icon:  "assets/icon-train.webp",
         label: "Transport públic",
         title: "No arriba fins Ca n'Alzina",
-        body:  "Rubió és un poble molt petit i no disposa de connexions directes.\n\nSi veniu en transport públic, la millor opció és arribar fins a Igualada amb bus (línea e5 des d'Estació del Nord) o amb els Ferrocarrils FGC (línia R6/R60 des de Plaça Espanya) des de Barcelona. Tingueu en compte que no hi ha connexió de transport públic fins a Ca n'Alzina, així que l'últim tram s'haurà de fer en taxi o compartint cotxe.",
+        body:  "Rubió és un poble molt petit i no disposa de connexions directes.\n\nEn transport públic, la única opció és arribar fins a Igualada amb bus (línea e5 des d'Estació del Nord) o amb els Ferrocarrils (línia R6/R60 des de Plaça Espanya) des de Barcelona. Tingueu en compte que no hi ha connexió de transport públic fins a Ca n'Alzina, així que l'últim tram s'haurà de fer en taxi o compartint cotxe.",
         recommended: false,
       },
     },
