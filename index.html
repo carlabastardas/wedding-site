@@ -1218,9 +1218,9 @@ function showConfirmation(isYes) {
     document.getElementById('confirm-body').textContent = isYes ? RSVP_COPY.confirmYesBody : RSVP_COPY.confirmNoBody;
 
     confirmation.classList.add('visible');
-
-    if (isYes) triggerEucalyptusCelebration();
   }, 380);
+
+  if (isYes) triggerEucalyptusCelebration();
 }
 
 /* --- Botó "Enviar una altra resposta" — torna al formulari ---
@@ -1345,7 +1345,7 @@ function triggerEucalyptusCelebration() {
 
   // Ràfaga inicial perquè la pluja apareixi de seguida
   for (let i = 0; i < 11; i++) {
-    _eucSpawnTimeout = setTimeout(spawnLeaf, i * 150);
+    spawnLeaf();
   }
 
   // Spawn continu mentre l'overlay sigui al DOM
