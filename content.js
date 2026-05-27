@@ -227,4 +227,14 @@ window.SITE_CONTENT = {
     ibanLabel:   "Compte bancari",
   },
 
+  contact: {
+    label: "Contacte",
+    title: "Alguna pregunta?",
+    subtitle: "Per a qualsevol dubte abans del gran dia, escriviu-nos directament per WhatsApp.",
+    people: [
+      { name: "Alex",  phone: "+34 680 61 15 89", href: "https://wa.me/34680611589" }, 
+      { name: "Carla", phone: "+34 644 48 73 57", href: "https://wa.me/34644487357" },
+    ],
+  },
+
 };
