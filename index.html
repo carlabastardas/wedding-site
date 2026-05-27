@@ -209,7 +209,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--color-text);backgr
 .rsvp-allergens-wrapper.visible{max-height:400px;opacity:1}
 .rsvp-allergens-inner{padding-top:1.75rem;border-top:1px solid var(--color-cream)}
 #allergens-wrapper .rsvp-field{padding-bottom:.25rem}
-#allergens-wrapper .rsvp-textarea{font-size:1.05rem;line-height:1.5;min-height:auto}
+#allergens-wrapper .rsvp-textarea{font-size:1.05rem;line-height:1.5;min-height:4rem}
 .rsvp-textarea{display:block;width:100%;background:transparent;border:none;outline:none;font-family:var(--font-sans);font-weight:300;font-size:.95rem;color:var(--color-text);padding:0;line-height:1.8;resize:none;min-height:80px;-webkit-appearance:none}
 .rsvp-textarea::placeholder{color:var(--color-text-muted)}
 .rsvp-submit-area{padding-top:3rem;text-align:center}
@@ -1062,13 +1062,53 @@ const fieldAttendance = document.getElementById('field-attendance');
 const errorAttendance = document.getElementById('error-attendance');
 const allergensWrapper = document.getElementById('allergens-wrapper');
 const allergensInput   = document.getElementById('rsvp-allergens');
-// Auto-grow: el textarea comença en 1 línia i creix amb el text
+let allergensMirror;
+
+// Auto-grow: el textarea comença en 1 línia i creix amb el text o el placeholder
 if (allergensInput) {
-  const autoGrow = () => {
-    allergensInput.style.height = 'auto';
-    allergensInput.style.height = allergensInput.scrollHeight + 'px';
+  allergensMirror = document.createElement('div');
+  allergensMirror.style.position = 'absolute';
+  allergensMirror.style.visibility = 'hidden';
+  allergensMirror.style.pointerEvents = 'none';
+  allergensMirror.style.whiteSpace = 'pre-wrap';
+  allergensMirror.style.wordBreak = 'break-word';
+  allergensMirror.style.overflowWrap = 'break-word';
+  allergensMirror.style.boxSizing = 'border-box';
+  allergensMirror.style.padding = '0';
+  allergensMirror.style.border = '0';
+  allergensMirror.style.width = '100%';
+  document.body.appendChild(allergensMirror);
+
+  const syncMirrorStyles = () => {
+    const style = window.getComputedStyle(allergensInput);
+    [
+      'fontFamily',
+      'fontSize',
+      'fontWeight',
+      'letterSpacing',
+      'lineHeight',
+      'textTransform',
+      'paddingTop',
+      'paddingRight',
+      'paddingBottom',
+      'paddingLeft',
+      'boxSizing'
+    ].forEach(prop => {
+      allergensMirror.style[prop] = style[prop];
+    });
+    allergensMirror.style.width = Math.round(allergensInput.getBoundingClientRect().width) + 'px';
   };
+
+  const autoGrow = () => {
+    syncMirrorStyles();
+    allergensInput.style.height = 'auto';
+    allergensMirror.textContent = allergensInput.value || allergensInput.placeholder || ' ';
+    const height = Math.max(allergensMirror.scrollHeight, 80);
+    allergensInput.style.height = height + 'px';
+  };
+
   allergensInput.addEventListener('input', autoGrow);
+  autoGrow();
 }
 const submitBtn       = document.getElementById('rsvp-submit');
 const confirmation    = document.getElementById('rsvp-confirmation');
