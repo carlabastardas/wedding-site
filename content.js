@@ -27,7 +27,7 @@ window.SITE_CONTENT = {
     name2:      "Alex",
     connector:  "&",
     date:       "5 de desembre de 2026",
-    location:   "Ca n'Alzina · Rubió · Catalunya",
+    location:   "Et convidem al nostre casament",
     scrollHint: "Mira el dia",
     bgDesktop:  "assets/hero-desktop.webp",
     bgMobile:   "assets/hero-mobile.webp",
