@@ -1103,7 +1103,7 @@ if (allergensInput) {
     syncMirrorStyles();
     allergensInput.style.height = 'auto';
     allergensMirror.textContent = allergensInput.value || allergensInput.placeholder || ' ';
-    const height = Math.max(allergensMirror.scrollHeight, 80);
+    const height = allergensMirror.scrollHeight;
     allergensInput.style.height = height + 'px';
   };
 
